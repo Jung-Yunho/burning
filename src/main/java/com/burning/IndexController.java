@@ -17,9 +17,4 @@ public class IndexController {
     public String indexYh() {
         return "yh/hello.html";
     }
-
-    @GetMapping("/dh")
-    public String indexDh() {
-        return "dh/hello.html";
-    }
 }
