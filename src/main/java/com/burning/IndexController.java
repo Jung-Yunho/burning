@@ -17,4 +17,11 @@ public class IndexController {
     public String indexYh() {
         return "yh/hello.html";
     }
+
+    @GetMapping("/dy")
+    public String indexDy() {
+        return "dy/hello01.html";
+    }
+
+
 }
