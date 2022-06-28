@@ -44,7 +44,7 @@
     </div>
     <div>
         <span>주소</span><br/>
-        <input type="text" name="addr1" th:value="${userRequestDto.addr1}"><br/>
+        <input type="text" id="addr1" name="addr1" th:value="${userRequestDto.addr1}" readonly><br/>
         <span class="valid" th:text="${valid_addr1}"></span><br/>
     </div>
     <div>
@@ -56,3 +56,5 @@
 </form>
 </body>
 </html>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="js/signup.js"></script>
