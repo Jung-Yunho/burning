@@ -1,4 +1,4 @@
-package com.burning.domain.user;
+package com.burning.domain.message;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Message {
-    String message = "";
-    String href = "";
+    private String message = "";
+    private String href = "";
 
     public Message(String message, String href) {
         this.message = message;
