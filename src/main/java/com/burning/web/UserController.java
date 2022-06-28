@@ -1,5 +1,6 @@
 package com.burning.web;
 
+import com.burning.domain.user.Message;
 import com.burning.services.UserService;
 import com.burning.validator.CheckEmailValidator;
 import com.burning.validator.CheckLoginIDValidator;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
 @Controller
@@ -43,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public String signUp(@Valid UserRequestDto userRequestDto, Errors errors, Model model) {
+    public String signUp(@Valid UserRequestDto userRequestDto, Errors errors, Model model) throws NoSuchAlgorithmException {
         if (errors.hasErrors()) {
             model.addAttribute("userRequestDto", userRequestDto);
             Map<String, String> validatorResult = userService.validateHandling(errors);
@@ -54,7 +56,7 @@ public class UserController {
         }
 
         userService.signUp(userRequestDto);
-        model.addAttribute("message", "회원가입이 완료되었습니다.");
-        return "redirect:/";
+        model.addAttribute("data", new Message("회원가입이 완료되었습니다.", "/"));
+        return "user/message";
     }
 }
