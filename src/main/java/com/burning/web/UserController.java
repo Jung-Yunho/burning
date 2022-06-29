@@ -1,6 +1,6 @@
 package com.burning.web;
 
-import com.burning.domain.user.Message;
+import com.burning.domain.message.Message;
 import com.burning.services.UserService;
 import com.burning.validator.CheckEmailValidator;
 import com.burning.validator.CheckLoginIDValidator;
