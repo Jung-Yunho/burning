@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>회원가입</title>
+    <meta charset="utf-8"/>
+    <th:block th:replace="fragment/head :: headFragment"/>
     <link rel="stylesheet" href="css/user/user.css"/>
 </head>
 <body>
-<form th:action="@{/signup}" method="POST">
-    <div>
-        <span>로그인아이디</span><br/>
-        <input type="text" name="loginID" th:value="${userRequestDto.loginID}" required><br/>
-        <span class="valid" th:text="${valid_loginID}"></span><br/>
-    </div>
-    <div>
-        <span>이름</span><br/>
-        <input type="text" name="name" th:value="${userRequestDto.name}" required><br/>
-        <span class="valid" th:text="${valid_name}"></span><br/>
-    </div>
-    <div>
-        <span>이메일</span><br/>
-        <input type="text" name="email" th:value="${userRequestDto.email}" required><br/>
-        <span class="valid" th:text="${valid_email}"></span><br/>
-    </div>
-    <div>
-        <span>닉네임</span><br/>
-        <input type="text" name="nickName" th:value="${userRequestDto.nickName}" required><br/>
-        <span class="valid" th:text="${valid_nickName}"></span><br/>
-    </div>
-    <div>
-        <span>비밀번호</span><br/>
-        <input type="password" name="pwd1" required><br/>
-        <span class="valid" th:text="${valid_pwd1}"></span><br/>
-    </div>
-    <div>
-        <span>비밀번호 재확인</span><br/>
-        <input type="password" name="pwd2" required><br/>
-        <span class="valid" th:text="${valid_pwd2}"></span><br/>
-    </div>
-    <div>
-        <span>휴대전화</span><br/>
-        <input type="text" name="phone" th:value="${userRequestDto.phone}"><br/>
-        <span class="valid" th:text="${valid_phone}"></span><br/>
-    </div>
-    <div>
-        <span>주소</span><br/>
-        <input type="text" id="addr1" name="addr1" th:value="${userRequestDto.addr1}" readonly><br/>
-        <span class="valid" th:text="${valid_addr1}"></span><br/>
-    </div>
-    <div>
-        <span>상세 주소</span><br/>
-        <input type="text" name="addr2" th:value="${userRequestDto.addr2}"><br/>
-        <span class="valid" th:text="${valid_addr2}"></span><br/>
-    </div>
-    <button>회원 가입</button>
-</form>
+<div id="body-wrapper">
+    <form th:action="@{/signup}" method="POST">
+        <h1><a href="/">Burning</a></h1><br/>
+        <div>
+            <span>로그인아이디</span><br/>
+            <input type="text" name="loginID" th:value="${userRequestDto.loginID}" required><br/>
+            <span class="valid" th:text="${valid_loginID}"></span><br/>
+        </div>
+        <div>
+            <span>이름</span><br/>
+            <input type="text" name="name" th:value="${userRequestDto.name}" required><br/>
+            <span class="valid" th:text="${valid_name}"></span><br/>
+        </div>
+        <div>
+            <span>이메일</span><br/>
+            <input type="text" name="email" th:value="${userRequestDto.email}" required><br/>
+            <span class="valid" th:text="${valid_email}"></span><br/>
+        </div>
+        <div>
+            <span>닉네임</span><br/>
+            <input type="text" name="nickName" th:value="${userRequestDto.nickName}" required><br/>
+            <span class="valid" th:text="${valid_nickName}"></span><br/>
+        </div>
+        <div>
+            <span>비밀번호</span><br/>
+            <input type="password" name="pwd1" required><br/>
+            <span class="valid" th:text="${valid_pwd1}"></span><br/>
+        </div>
+        <div>
+            <span>비밀번호 재확인</span><br/>
+            <input type="password" name="pwd2" required><br/>
+            <span class="valid" th:text="${valid_pwd2}"></span><br/>
+        </div>
+        <div>
+            <span>휴대전화</span><br/>
+            <input type="text" name="phone" th:value="${userRequestDto.phone}"><br/>
+            <span class="valid" th:text="${valid_phone}"></span><br/>
+        </div>
+        <div>
+            <span>주소</span><br/>
+            <input type="text" id="addr1" name="addr1" th:value="${userRequestDto.addr1}" readonly><br/>
+            <span class="valid" th:text="${valid_addr1}"></span><br/>
+        </div>
+        <div>
+            <span>상세 주소</span><br/>
+            <input type="text" name="addr2" th:value="${userRequestDto.addr2}"><br/>
+            <span class="valid" th:text="${valid_addr2}"></span><br/>
+        </div>
+        <button>회원 가입</button>
+        <th:block th:replace="fragment/footer :: footerFragment" />
+    </form>
+</div>
 </body>
 </html>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
