@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserRequestDto{
+public class UserRequestDto {
     @NotBlank(message = "아이디는 필수 입력 값입니다.")
     @Pattern(regexp = "[a-zA-Z0-9]{8,16}", message = "아이디는 영문, 숫자만 가능하며 8 ~ 16자리까지 가능합니다.")
     private String loginID;
@@ -67,6 +67,4 @@ public class UserRequestDto{
                 .status(status)
                 .build();
     }
-
-
 }
