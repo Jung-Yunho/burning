@@ -5,15 +5,19 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.*;
 
 @NoArgsConstructor
 @Getter
 @Entity
 @DynamicInsert
-public class User extends BaseTimeEntity {
+public class User extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
@@ -43,6 +47,10 @@ public class User extends BaseTimeEntity {
     @Column
     private String status;
 
+    @Enumerated(EnumType.STRING)
+    @Column
+    private Role role;
+
     @Builder
     public User(Long id, String loginID, String pwd1, String name, String nickName, String phone, String email, String addr1, String addr2, String status) {
         this.id = id;
@@ -55,5 +63,12 @@ public class User extends BaseTimeEntity {
         this.addr1 = addr1;
         this.addr2 = addr2;
         this.status = status;
+        this.role=role;
     }
+
+
+    public String getRoleKey(){
+        return this.role.getKey();
+    }
+
 }

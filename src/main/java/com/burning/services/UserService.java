@@ -1,8 +1,14 @@
 package com.burning.services;
 
+import com.burning.domain.user.User;
 import com.burning.domain.user.UserRepository;
 import com.burning.web.dto.UserRequestDto;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Errors;
@@ -11,8 +17,7 @@ import org.springframework.validation.FieldError;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @AllArgsConstructor
@@ -46,4 +51,6 @@ public class UserService {
         }
         return sb.toString();
     }
+
+
 }

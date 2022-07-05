@@ -8,6 +8,7 @@ import com.burning.validator.CheckNickNameValidator;
 import com.burning.validator.CheckReConfirmPassword;
 import com.burning.web.dto.UserRequestDto;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
@@ -59,4 +61,22 @@ public class UserController {
         model.addAttribute("data", new Message("회원가입이 완료되었습니다.", "/"));
         return "user/message";
     }
+
+    /* ======================ldy ========================= */
+    @GetMapping("/signin")
+    public String signin(@AuthenticationPrincipal UserRequestDto userRequestDto, HttpServletRequest request)throws Exception{
+        System.out.println("들어왔니");
+        return "user/signin";
+    }
+    
+
+
+
+    @GetMapping("/signout")
+    public String signout()throws Exception{
+        return "";
+    }
+
+
+
 }
