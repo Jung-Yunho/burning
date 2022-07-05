@@ -5,6 +5,8 @@
       <output-path>$PROJECT_DIR$/build/libs/exploded/burning-1.0-SNAPSHOT.war</output-path>
       <properties id="gradle-properties">
         <options external-project-path="$PROJECT_DIR$">
+          <buildTaskPath>:war_exploded</buildTaskPath>
+          <cleanTaskPath>:cleanWar_exploded</cleanTaskPath>
           <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
         </options>
       </properties>
@@ -12,7 +14,7 @@
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/burning-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
         </element>
-        <element id="javaee-facet-resources" facet="burning.main/web/Web Gradle : burning-1.0-SNAPSHOT.war" />
+        <element id="javaee-facet-resources" facet="burning.main/web/웹 Gradle : burning-1.0-SNAPSHOT.war" />
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="burning.main" />
@@ -28,70 +30,76 @@
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.1.7.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.1.7.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.17.Final" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.3" />
             <element id="library" level="project" name="Gradle: javax.xml.bind:jaxb-api:2.3.1" />
             <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.3.10.Final" />
             <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-jpa:2.1.10.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-aspects:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.session:spring-session-core:2.1.8.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.1.7.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.1.7.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-orm:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE" />
             <element id="library" level="project" name="Gradle: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" />
             <element id="library" level="project" name="Gradle: nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.1.3" />
             <element id="library" level="project" name="Gradle: org.codehaus.groovy:groovy:2.5.7" />
             <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.1.7.RELEASE" />
-            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.3.2" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:2.1.10.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-tx:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9" />
-            <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.23" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.9" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.3.2" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.22" />
             <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:9.0.22" />
             <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:9.0.22" />
             <element id="library" level="project" name="Gradle: javax.validation:validation-api:2.0.1.Final" />
-            <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.4.Final" />
             <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.2.Final" />
             <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.4.0" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.1.9.RELEASE" />
             <element id="library" level="project" name="Gradle: org.aspectj:aspectjweaver:1.9.4" />
             <element id="library" level="project" name="Gradle: com.zaxxer:HikariCP:3.2.0" />
             <element id="library" level="project" name="Gradle: javax.activation:javax.activation-api:1.2.0" />
+            <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.4.Final" />
             <element id="library" level="project" name="Gradle: javax.persistence:javax.persistence-api:2.2" />
-            <element id="library" level="project" name="Gradle: ognl:ognl:3.1.12" />
             <element id="library" level="project" name="Gradle: org.javassist:javassist:3.23.2-GA" />
             <element id="library" level="project" name="Gradle: net.bytebuddy:byte-buddy:1.9.16" />
             <element id="library" level="project" name="Gradle: antlr:antlr:2.7.7" />
             <element id="library" level="project" name="Gradle: org.jboss:jandex:2.0.5.Final" />
             <element id="library" level="project" name="Gradle: org.dom4j:dom4j:2.1.1" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-orm:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:2.1.10.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-tx:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.26" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.1.9.RELEASE" />
+            <element id="library" level="project" name="Gradle: ognl:ognl:3.1.12" />
+            <element id="library" level="project" name="Gradle: org.attoparser:attoparser:2.0.5.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.6.RELEASE" />
+            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.9" />
+            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
             <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
             <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.11.2" />
             <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.26" />
-            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.26" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.1.9.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.attoparser:attoparser:2.0.5.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.6.RELEASE" />
-            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
-            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.9" />
             <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
             <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.2" />
+            <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.23" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-devtools:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-security:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-validation:2.1.7.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-web:5.1.6.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-config:5.1.6.RELEASE" />
+            <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-core:5.1.6.RELEASE" />
           </element>
         </element>
       </root>
@@ -99,7 +107,10 @@
     <artifact type="war" name="Gradle : burning : burning-1.0-SNAPSHOT.war">
       <output-path>$PROJECT_DIR$/build/libs</output-path>
       <properties id="gradle-properties">
-        <options external-project-path="$PROJECT_DIR$" />
+        <options external-project-path="$PROJECT_DIR$">
+          <buildTaskPath>:war</buildTaskPath>
+          <cleanTaskPath>:cleanWar</cleanTaskPath>
+        </options>
       </properties>
       <root id="archive" name="burning-1.0-SNAPSHOT.war">
         <element id="artifact" artifact-name="Gradle : burning : burning-1.0-SNAPSHOT.war (exploded)" />
@@ -107,6 +118,15 @@
     </artifact>
   </component>
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.8/448003bc1b234aac04b58e27d7755c12c3ec4236/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="burning.main" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
@@ -568,6 +588,9 @@
     <execution-variables />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
   <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
@@ -1091,6 +1114,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.7.RELEASE/1764fc113610ae7f54231df9c124d2f5598dace1/spring-boot-autoconfigure-2.1.7.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.springframework.boot:spring-boot-devtools:2.1.7.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-devtools/2.1.7.RELEASE/5a846c6e9ab67a4cbf7c4f22bc13bcab188198f9/spring-boot-devtools-2.1.7.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-devtools/2.1.7.RELEASE/e99f84f3c88ff5c6de3693f6b5db53fad14de6b6/spring-boot-devtools-2.1.7.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.1.7.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/2.1.7.RELEASE/4577d056af1f823bb7730c99f43c3268dd697310/spring-boot-starter-aop-2.1.7.RELEASE.jar!/" />
@@ -1126,6 +1158,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="Gradle: org.springframework.boot:spring-boot-starter-security:2.1.7.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-security/2.1.7.RELEASE/847dc9890b9974cb0ef6d1fdf0050b94b7a0fa4a/spring-boot-starter-security-2.1.7.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/2.1.7.RELEASE/cf9547e20aa6a32c0b0f53400db6eecfab660f86/spring-boot-starter-thymeleaf-2.1.7.RELEASE.jar!/" />
@@ -1136,6 +1175,13 @@
     <library name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.1.7.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.1.7.RELEASE/11f2a86aefefba72a4efe5ff18f4165a4b4e78b/spring-boot-starter-tomcat-2.1.7.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: org.springframework.boot:spring-boot-starter-validation:2.1.7.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/2.1.7.RELEASE/3e2276a870dd791d30077b6420c2d1340dc4bb45/spring-boot-starter-validation-2.1.7.RELEASE.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -1179,6 +1225,33 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.1.10.RELEASE/6e315949c2406c93367b75718171ed0eb45315c9/spring-data-jpa-2.1.10.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.security:spring-security-config:5.1.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.1.6.RELEASE/11b96e5836074db01920e5452996b2ad2cd3d772/spring-security-config-5.1.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.1.6.RELEASE/a287bf3a8445e83541530fc59c0c1eaea7f9a87e/spring-security-config-5.1.6.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.security:spring-security-core:5.1.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.6.RELEASE/86af52bc544976358b66b4617d6edd81824940bd/spring-security-core-5.1.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.6.RELEASE/c6e9a670fd05adf1a77db18b5277c4012b328f9/spring-security-core-5.1.6.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.security:spring-security-web:5.1.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.1.6.RELEASE/e3b159e84467cccddce815d30a9ccdc8d8b843c9/spring-security-web-5.1.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.1.6.RELEASE/fa961dd322e17961dbd5e2bc72df1d2e29ed2afe/spring-security-web-5.1.6.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.springframework.session:spring-session-core:2.1.8.RELEASE">
