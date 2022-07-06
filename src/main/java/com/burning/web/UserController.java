@@ -59,4 +59,16 @@ public class UserController {
         model.addAttribute("data", new Message("회원가입이 완료되었습니다.", "/"));
         return "user/message";
     }
+
+    @GetMapping("/signin")
+    public String signInForm()throws Exception{
+        return "user/signin";
+    }
+
+    @PostMapping("/signin")
+    public String signIn()throws Exception{
+        return "redirect:/";
+    }
+
+
 }

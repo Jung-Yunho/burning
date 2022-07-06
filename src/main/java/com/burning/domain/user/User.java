@@ -24,6 +24,7 @@ public class User extends BaseTimeEntity {
     @Column(name = "password")
     @NotNull
     private String pwd1;
+
     private String pwd2;
     @Column(nullable = false)
     @NotNull

@@ -1,8 +1,15 @@
 package com.burning.services;
 
+import com.burning.domain.user.Role;
+import com.burning.domain.user.User;
 import com.burning.domain.user.UserRepository;
 import com.burning.web.dto.UserRequestDto;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Errors;
@@ -11,13 +18,31 @@ import org.springframework.validation.FieldError;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class UserService {
+public class UserService implements UserDetailsService {
     private final UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String loginID)throws UsernameNotFoundException{
+        User findUser = userRepository.findByLoginID(loginID);
+        List<GrantedAuthority> roles = new ArrayList<>();
+        if(findUser.getLoginID().equals("administrator")){
+            roles.add(new SimpleGrantedAuthority(Role.ADMIN.getValue()));
+        }else{
+            roles.add(new SimpleGrantedAuthority(Role.USER.getValue()));
+        }
+
+        return new org.springframework.security.core.userdetails.User(findUser.getLoginID(),findUser.getPwd1(),roles);
+    }
+
+
+
 
     public Map<String, String> validateHandling(Errors errors) {
         Map<String, String> validatorResult = new HashMap<>();
